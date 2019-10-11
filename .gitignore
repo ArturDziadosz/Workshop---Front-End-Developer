@@ -1,1 +1,7 @@
-/project/*
+#Project assets like project :)
+
+project/*
+
+#WebStorm folder
+
+.idea/*

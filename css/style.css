@@ -245,11 +245,12 @@ MAIN
   justify-content: space-between;
   align-items: stretch;
   padding: 35px;
+  position: relative;
 }
 
 .reversed {
   flex-direction: row-reverse;
-  padding: 30px;
+  padding: 12px;
 }
 
 .tray__box {
@@ -257,6 +258,10 @@ MAIN
   flex-direction: column;
   justify-content: center;
   width: 416px;
+}
+
+.tray__box--mod {
+  margin: 0 calc(20px - 12px);
 }
 
 .tray__box__title {
@@ -278,16 +283,57 @@ MAIN
   width: 80%;
 }
 
+.tray__box--laptop {
+  width: 433px;
+  height: 294px;
+  margin: calc(38px - 35px) calc(71px - 35px);
+  position: relative;
+}
+
 .tray__img--laptop {
   height: 219px;
   width: auto;
-  margin: 78px 82px 0 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tray__box--laptop::before {
+  content: "";
+  display: block;
+  background-color: var(--color-fuchsia);
+  border-radius: 41px;
+  width: 180px;
+  height: 180px;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.tray__box--phone {
+  width: 426px;
+  height: 345px;
+  margin: 0 calc(70px - 12px);
+  position: relative;
 }
 
 .tray__img--phone {
-  height: 328px;
-  width: auto;
-  margin-left: 40px;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tray__box--phone::before {
+  content: "";
+  display: block;
+  background-color: var(--color-lb);
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  position: absolute;
 }
 
 .tray__img--trumpet {

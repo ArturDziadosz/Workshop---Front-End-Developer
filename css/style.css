@@ -460,9 +460,8 @@ CONTACT FORM
 
 .question {
   width: 896px;
-  margin: 0 auto;
   display: flex;
-  margin-top: 197px;
+  margin: 197px auto 0;
   justify-content: space-between;
 }
 
@@ -537,6 +536,7 @@ CONTACT FORM
   opacity: .5;
   font-size: 1.2em;
   line-height: 1.3em;
+  margin: 25px 0;
 }
 
 .form__checkbox {
@@ -588,10 +588,62 @@ CONTACT FORM
   border-radius: 35px;
   box-shadow: 5px 10px 14px #07ACE629;
   margin-top: 20px;
+  margin-bottom: 59px;
 }
 
 .btn--send:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*
+FOOTER
+*/
+
+.footer {
+  width: 100vw;
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, .29);
+  background-color: #F7F7F7;
+}
+
+.footer__bar {
+  height: 89px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: var(--color-lb);
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.footer__text {
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--bgc-light);
+}
+
+.footer__icons {
+  display: flex;
+}
+
+.footer__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.icon--twitter {
+  background-image: url("../assets/Twitter.svg");
+}
+
+.icon--facebook {
+  background-image: url("../assets/Facebook.svg");
 }
 
 

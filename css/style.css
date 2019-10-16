@@ -453,3 +453,149 @@ PRICING
 .pricing__box--special {
   transform: scale(1.1);
 }
+
+/*
+CONTACT FORM
+*/
+
+.question {
+  width: 896px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 197px;
+  justify-content: space-between;
+}
+
+.contact__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 49px;
+  line-height: 57px;
+}
+
+.contact__text {
+  line-height: 22px;
+  margin-top: 22px;
+  margin-bottom: 42px;
+}
+
+.contact__icons {
+  display: flex;
+}
+
+.contact__icon {
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--bgc-light);
+  display: flex;
+  align-items: center;
+}
+
+.contact__icon:first-of-type::before {
+  content: "";
+  display: block;
+  background-image: url("../assets/Mail Icon.svg");
+  width: 27px;
+  height: 27px;
+  margin-right: 10px;
+}
+
+.contact__icon:last-of-type::before {
+  content: "";
+  display: block;
+  background-image: url("../assets/Phone Icon.svg");
+  width: 27px;
+  height: 27px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.question__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 440px;
+  position: relative;
+}
+
+.form__label {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3px;
+  color: var(--color-lb);
+}
+
+.form__input {
+  border: none;
+  border-bottom: 1px solid var(--bgc-medium);
+  margin: 30px 0;
+}
+
+.form__input:focus {
+  outline: none;
+  border: 1px solid var(--color-lb);
+  opacity: .5;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+
+.form__checkbox {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 17px;
+  color: var(--bgc-dark);
+}
+
+.form__checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 130px;    /*co tutaj się dzieje ? :)*/
+  height: 24px;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid var(--bgc-medium);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+  margin: 4px 10px 0 0;
+  position: relative;
+}
+
+.form__checkbox input:checked:after {
+  content: "";
+  background-image: url("../assets/Checkmark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 12px;
+  height: 11px;
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+
+.btn--send {
+  display: inline-block;
+  align-self: flex-end;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  line-height: 18px;
+  padding: 20px 97px;
+  border-radius: 35px;
+  box-shadow: 5px 10px 14px #07ACE629;
+  margin-top: 20px;
+}
+
+.btn--send:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+

@@ -547,7 +547,7 @@ CONTACT FORM
   color: var(--bgc-dark);
 }
 
-.form__checkbox p {
+.form__checkbox span {
   flex-shrink: 200;       /* jak zrobić aby input był 24/24px */
 }
 

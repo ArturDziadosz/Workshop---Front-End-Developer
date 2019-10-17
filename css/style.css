@@ -543,9 +543,12 @@ CONTACT FORM
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  text-align: justify;
   line-height: 17px;
   color: var(--bgc-dark);
+}
+
+.form__checkbox p {
+  flex-shrink: 200;       /* jak zrobić aby input był 24/24px */
 }
 
 .form__checkbox input {
@@ -553,7 +556,7 @@ CONTACT FORM
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  width: 130px;    /*co tutaj się dzieje ? :)*/
+  width: 24px;
   height: 24px;
   display: inline-block;
   border-radius: 4px;
@@ -573,7 +576,7 @@ CONTACT FORM
   height: 11px;
   display: inline-block;
   position: absolute;
-  left: 6px;
+  left: 5px;
   top: 6px;
 }
 

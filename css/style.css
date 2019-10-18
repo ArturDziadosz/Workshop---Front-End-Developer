@@ -551,7 +551,7 @@ CONTACT FORM
   flex-shrink: 200;       /* jak zrobić aby input był 24/24px */
 }
 
-.form__checkbox input {
+.form__checkbox button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

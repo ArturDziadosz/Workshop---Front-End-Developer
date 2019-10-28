@@ -135,10 +135,10 @@
     <h2 class="calc__title">Calculate how much you’ll pay</h2>
     <div class="calc__box">
       <form class="calc__box__form">
-        <input type="number" class="box__form border--blue" placeholder="Products quantity">
-        <input type="number" class="box__form border--blue" placeholder="Estimated orders in month">
-        <select class="box__form box__form--option border--blue">
-          <option value="None">Choose package</option>
+        <input type="number" class="box__form border--blue" placeholder="Products quantity" id="productQuantity">
+        <input type="number" class="box__form border--blue" placeholder="Estimated orders in month" id="estimatedOrder">
+        <select class="box__form box__form--option border--blue" id="package">
+          <option value="Choose package">Choose package</option>
           <option value="Basic">Basic</option>
           <option value="Professional">Professional</option>
           <option value="Premium">Premium</option>
@@ -149,30 +149,30 @@
       <div class="calc__box__result">
         <div class="box__result__row bahama">
           <div class="row__title">Products</div>
-          <div class="row__calc">20 * $0.5</div>
-          <div class="row__sum">$10</div>
+          <div class="row__calc" id="productsCalc"></div>
+          <div class="row__sum" id="productsSum">$0</div>
         </div>
         <div class="box__result__row bahama">
           <div class="row__title">Orders</div>
-          <div class="row__calc">30 * $0.25</div>
-          <div class="row__sum">$7.5</div>
+          <div class="row__calc" id="ordersCalc"></div>
+          <div class="row__sum" id="ordersSum">$0</div>
         </div>
         <div class="box__result__row bahama">
           <div class="row__title">Package</div>
-          <div class="row__calc">Premium</div>
-          <div class="row__sum">$60</div>
+          <div class="row__calc" id="packageType"></div>
+          <div class="row__sum" id="packageSum">$0</div>
         </div>
         <div class="box__result__row bahama">
           <div class="row__title">Accounting</div>
-          <div class="row__sum">$35</div>
+          <div class="row__sum" id="accountingSum">$35</div>
         </div>
         <div class="box__result__row bahama">
           <div class="row__title">Terminal</div>
-          <div class="row__sum">$5</div>
+          <div class="row__sum" id="terminalSum">$5</div>
         </div>
         <div class="box__result__sum blue">
           <div class="row__title">Total</div>
-          <div class="row__sum row__sum--bigger">$117.5</div>
+          <div class="row__sum row__sum--bigger" id="totalSum">$40</div>
         </div>
       </div>
     </div>
@@ -214,5 +214,6 @@
     </div>
   </div>
 </footer>
+<script src="js/app.js"></script>
 </body>
 </html>

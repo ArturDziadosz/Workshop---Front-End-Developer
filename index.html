@@ -59,7 +59,7 @@
   </div>
 </section>
 <main class="main">
-  <div class="tray">
+  <div class="tray container">
     <div class="tray__box">
       <h2 class="tray__box__title">Be always first</h2>
       <p class="tray__box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -109,6 +109,7 @@
     <div class="pricing__box pricing__box--special border--blue">
       <h3 class="pricing__box__title">Professional</h3>
       <h2 class="pricing__box__price blue">$25</h2>
+      <p class="pricing__box__text">Limited offer</p>
       <p class="pricing__box__checklist">500 MB HDD</p>
       <p class="pricing__box__checklist">2 Subdomains</p>
       <p class="pricing__box__checklist">5 E-mails</p>
@@ -119,12 +120,58 @@
     <div class="pricing__box border--bahama">
       <h3 class="pricing__box__title">Premium</h3>
       <h2 class="pricing__box__price bahama">$60</h2>
+      <p class="pricing__box__text">Limited offer</p>
       <p class="pricing__box__checklist">2 GB HDD</p>
       <p class="pricing__box__checklist">5 Subdomains</p>
       <p class="pricing__box__checklist">20 E-mails</p>
       <p class="pricing__box__checklist">Two years license</p>
       <p class="pricing__box__checklist">Full support</p>
       <a href="#" class="btn btn--position bahama">Begin</a>
+    </div>
+  </div>
+</section>
+<section class="calculator">
+  <div class="container calc__container">
+    <h2 class="calc__title">Calculate how much you’ll pay</h2>
+    <div class="calc__box">
+      <div class="calc__box__form">
+        <input type="number" class="box__form__quantity" placeholder="Products quantity">
+        <input type="number" class="box__form__orders" placeholder="Estimated orders in month">
+        <input type="" class="box__form__option" placeholder="Choose package">
+        <input id="accounting" type="checkbox" class="box__form__checkbox" checked>
+        <label for="accounting">Accounting</label>
+        <input id="rental" type="checkbox" class="box__form__checkbox" checked>
+        <label for="rental">Accounting</label>
+      </div>
+      <div class="calc__box__result">
+        <div class="box__result__row">
+          <div class="row__title">Products</div>
+          <div class="row__calc">20 * $0.5</div>
+          <div class="row__sum">$10</div>
+        </div>
+        <div class="box__result__row">
+          <div class="row__title">Orders</div>
+          <div class="row__calc">30 * $0.25</div>
+          <div class="row__sum">$7.5</div>
+        </div>
+        <div class="box__result__row">
+          <div class="row__title">Package</div>
+          <div class="row__calc">Premium</div>
+          <div class="row__sum">$60</div>
+        </div>
+        <div class="box__result__row">
+          <div class="row__title">Accounting</div>
+          <div class="row__calc">$35</div>
+        </div>
+        <div class="box__result__row">
+          <div class="row__title">Terminal</div>
+          <div class="row__calc">$5</div>
+        </div>
+        <div class="box__result__sum">
+          <div class="row__title">Total</div>
+          <div class="row__calc">$117.5</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -149,7 +196,7 @@
       of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of
         such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>
     </label>
-    <button class="btn blue btn--send">Send</button>
+    <button class="btn blue btn--send" type="submit">Send</button>
   </form>
 </section>
 <footer class="footer">

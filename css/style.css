@@ -464,6 +464,135 @@ PRICING
 }
 
 /*
+ CALCULATOR
+*/
+
+.calculator {
+  background-color: #F7F7F7;
+  padding: 93px 50px 109px 50px;
+}
+
+.calc__container {
+  text-align: center;
+}
+
+.calc__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 52px;
+}
+
+.calc__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc__box__form input, .calc__box__form select {
+  display: block;
+}
+
+.calc__box__form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 248px;
+  width: 440px;
+  margin-right: 47px;
+  position: relative;
+}
+
+.box__form {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(8, 166, 228, 0.16);
+  font-size: 13px;
+  line-height: 18px;
+  padding: 11px 20px;
+}
+
+.box__form:nth-child(2) {
+  margin: 20px 0;
+}
+
+.box__form::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--bgc-light);
+}
+
+.box__form--option {
+  background-color: #fff;
+  color: var(--bgc-light);
+}
+
+.calc__box__form label {
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--bgc-dark);
+  text-align: left;
+  padding-left: 34px;
+  position: relative;
+  margin: 23px 0 4px 0;
+}
+
+.box__form__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid var(--bgc-medium);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: -4px;
+  top: -6px;
+}
+
+.box__form__checkbox:checked::after {
+  content: "";
+  background-image: url("../assets/calc/Checkmark (1).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 12px;
+  height: 11px;
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+.calc__box__form::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  background-image: url("../assets/calc/Arrow Down.svg");
+  top: 129px;
+  left: 404px;
+}
+
+.calc__box__result {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 248px;
+  width: 385px;
+}
+
+
+/*
 CONTACT FORM
 */
 
@@ -563,7 +692,7 @@ CONTACT FORM
   display: inline-block;
   border-radius: 4px;
   border: 1px solid var(--bgc-medium);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
   margin: 4px 10px 0 0;
   position: relative;
 }
@@ -578,7 +707,7 @@ CONTACT FORM
   display: inline-block;
   border-radius: 4px;
   border: 1px solid var(--bgc-medium);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
   margin: 4px 10px 0 0;
   position: relative;
   flex-shrink: 0;

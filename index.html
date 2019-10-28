@@ -134,15 +134,18 @@
   <div class="container calc__container">
     <h2 class="calc__title">Calculate how much you’ll pay</h2>
     <div class="calc__box">
-      <div class="calc__box__form">
-        <input type="number" class="box__form__quantity" placeholder="Products quantity">
-        <input type="number" class="box__form__orders" placeholder="Estimated orders in month">
-        <input type="" class="box__form__option" placeholder="Choose package">
-        <input id="accounting" type="checkbox" class="box__form__checkbox" checked>
-        <label for="accounting">Accounting</label>
-        <input id="rental" type="checkbox" class="box__form__checkbox" checked>
-        <label for="rental">Accounting</label>
-      </div>
+      <form class="calc__box__form">
+        <input type="number" class="box__form border--blue" placeholder="Products quantity">
+        <input type="number" class="box__form border--blue" placeholder="Estimated orders in month">
+        <select class="box__form box__form--option border--blue">
+          <option value="None">Choose package</option>
+          <option value="Basic">Basic</option>
+          <option value="Professional">Professional</option>
+          <option value="Premium">Premium</option>
+        </select>
+        <label for="accounting"><input id="accounting" type="checkbox" class="box__form__checkbox" checked>Accounting</label>
+        <label for="rental"><input id="rental" type="checkbox" class="box__form__checkbox" checked>Rental of a payment terminal</label>
+      </form>
       <div class="calc__box__result">
         <div class="box__result__row">
           <div class="row__title">Products</div>

@@ -5,3 +5,12 @@ project/*
 #WebStorm folder
 
 .idea/*
+
+#node
+
+node_modules library root/*
+package-lock.json
+
+#main.css form sassy
+
+css/main.css

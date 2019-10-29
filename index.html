@@ -137,12 +137,18 @@
       <form class="calc__box__form">
         <input type="number" class="box__form border--blue" placeholder="Products quantity" id="productQuantity">
         <input type="number" class="box__form border--blue" placeholder="Estimated orders in month" id="estimatedOrder">
-        <select class="box__form box__form--option border--blue" id="package">
-          <option value="Choose package">Choose package</option>
-          <option value="Basic">Basic</option>
-          <option value="Professional">Professional</option>
-          <option value="Premium">Premium</option>
-        </select>
+        <input class="box__form border--blue" id="package">
+        <div class="cover" id="cover">Choose package</div>
+        <i class="arrow" id="arrow"></i>
+
+        <div class="box__form options visible" id="options">
+          <ul>
+            <li id="basic">Basic</li>
+            <li id="professional">Professional</li>
+            <li id="premium">Premium</li>
+          </ul>
+        </div>
+
         <label for="accounting"><input id="accounting" type="checkbox" class="box__form__checkbox" checked>Accounting</label>
         <label for="rental"><input id="rental" type="checkbox" class="box__form__checkbox" checked>Rental of a payment terminal</label>
       </form>

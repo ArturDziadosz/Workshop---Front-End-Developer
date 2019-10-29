@@ -527,9 +527,10 @@ PRICING
   color: var(--bgc-light);
 }
 
-.box__form--option {
-  background-color: #fff;
-  color: var(--bgc-light);
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .calc__box__form label {
@@ -540,6 +541,7 @@ PRICING
   padding-left: 34px;
   position: relative;
   margin: 23px 0 4px 0;
+  cursor: pointer;
 }
 
 .box__form__checkbox {
@@ -556,6 +558,7 @@ PRICING
   position: absolute;
   left: -4px;
   top: -6px;
+  cursor: pointer;
 }
 
 .box__form__checkbox:checked::after {
@@ -570,9 +573,66 @@ PRICING
   position: absolute;
   left: 5px;
   top: 6px;
+  cursor: pointer;
 }
 
-.calc__box__form::after {
+.cover {
+  text-align: left;
+  border-radius: 6px;
+  position: absolute;
+  width: 440px;
+  height: 40px;
+  top:120px;
+  left: 0;
+  color: var(--bgc-light);
+  font-size: 13px;
+  line-height: 18px;
+  padding: 11px 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.options {
+  position: absolute;
+  top:170px;
+  left: 0;
+  height: 105px;
+  width: 440px;
+  text-align: left;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 11px 20px;
+  border: 1px solid #EB476E;
+  box-shadow: 0 3px 6px rgba(235, 71, 110, 0.16);
+  background-color: #F7F7F7;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.options ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.options ul li {
+  display: block;
+  height: 35px;
+  line-height: 25px;
+}
+
+.options ul li:hover {
+  background-color: rgba(235, 71, 110, 0.16);
+}
+
+.visible {
+  visibility: hidden;
+}
+
+.arrow {
   content: "";
   display: block;
   width: 22px;
@@ -581,6 +641,11 @@ PRICING
   background-image: url("../assets/calc/Arrow Down.svg");
   top: 129px;
   left: 404px;
+  transition: .2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .calc__box__result {

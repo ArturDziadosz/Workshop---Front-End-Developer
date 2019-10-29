@@ -10,7 +10,3 @@ project/*
 
 node_modules/*
 package-lock.json
-
-#main.css form sassy
-
-css/main.css

@@ -8,7 +8,7 @@ project/*
 
 #node
 
-node_modules library root/*
+node_modules/*
 package-lock.json
 
 #main.css form sassy

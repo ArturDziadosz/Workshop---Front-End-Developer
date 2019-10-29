@@ -21,12 +21,17 @@
     <a href="#" class="header__logo">BestShop</a>
     <nav class="header__nav">
       <ul class="header__nav__list">
-        <li><a href="#" class="header__nav__list__element">WHY US</a></li>
-        <li><a href="#" class="header__nav__list__element">BENEFITS</a></li>
-        <li><a href="#" class="header__nav__list__element">PRICES</a></li>
-        <li><a href="#" class="header__nav__list__element">CONTACT</a></li>
+        <li><a href="#whyUs" class="header__nav__list__element">WHY US</a></li>
+        <li><a href="#benefits" class="header__nav__list__element">BENEFITS</a></li>
+        <li><a href="#prices" class="header__nav__list__element">PRICES</a></li>
+        <li><a href="#contact" class="header__nav__list__element">CONTACT</a></li>
       </ul>
     </nav>
+    <div class="hamburgerMenu" id="hamburgerMenu">
+      <div class="slice"></div>
+      <div class="slice"></div>
+      <div class="slice"></div>
+    </div>
   </div>
 </header>
 <section class="banner">
@@ -34,7 +39,7 @@
   <p class="banner__text">Open shop on our platform and increase your sales</p>
   <a href="#" class="btn--banner blue">Open your shop</a>
 </section>
-<section class="info container">
+<section class="info container" id="whyUs">
   <h2 class="info__title">The most popular sales platform in country</h2>
   <div class="info__boxes">
     <div class="info__box">
@@ -60,7 +65,7 @@
     </div>
   </div>
 </section>
-<main class="main">
+<main class="main" id="benefits">
   <div class="tray container">
     <div class="tray__box">
       <h2 class="tray__box__title">Be always first</h2>
@@ -95,7 +100,7 @@
     <img src="assets/Trumpet.png" alt="trumpet" class="tray__img--trumpet">
   </div>
 </main>
-<section class="pricing">
+<section class="pricing" id="prices">
   <h2 class="pricing__title">Pricing</h2>
   <div class="pricing__boxes">
     <div class="pricing__box border--pink">
@@ -106,7 +111,7 @@
       <p class="pricing__box__checklist">2 E-mails</p>
       <p class="pricing__box__checklist checklist--negative">Two years license</p>
       <p class="pricing__box__checklist checklist--negative">Full support</p>
-      <a href="#" class="btn btn--position pink">Begin</a>
+      <a id="beginBasic" href="#calculator" class="btn btn--position pink">Begin</a>
     </div>
     <div class="pricing__box pricing__box--special border--blue">
       <h3 class="pricing__box__title">Professional</h3>
@@ -117,7 +122,7 @@
       <p class="pricing__box__checklist">5 E-mails</p>
       <p class="pricing__box__checklist">One year license</p>
       <p class="pricing__box__checklist checklist--negative">Full support</p>
-      <a href="#" class="btn btn--position blue">Begin</a>
+      <a id="beginProfessional" href="#calculator" class="btn btn--position blue">Begin</a>
     </div>
     <div class="pricing__box border--bahama">
       <h3 class="pricing__box__title">Premium</h3>
@@ -128,11 +133,11 @@
       <p class="pricing__box__checklist">20 E-mails</p>
       <p class="pricing__box__checklist">Two years license</p>
       <p class="pricing__box__checklist">Full support</p>
-      <a href="#" class="btn btn--position bahama">Begin</a>
+      <a id="beginPremium" href="#calculator" class="btn btn--position bahama">Begin</a>
     </div>
   </div>
 </section>
-<section class="calculator">
+<section class="calculator" id="calculator">
   <div class="container calc__container">
     <h2 class="calc__title">Calculate how much you’ll pay</h2>
     <div class="calc__box">
@@ -188,7 +193,7 @@
     </div>
   </div>
 </section>
-<section class="question">
+<section class="question" id="contact">
   <div class="question__contact">
     <h2 class="contact__title">Any questions?</h2>
     <p class="contact__text">Leave your email address or call us!</p>

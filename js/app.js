@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const basic = document.getElementById("basic");
   const professional = document.getElementById("professional");
   const premium = document.getElementById("premium");
+  const beginBasic = document.getElementById("beginBasic");
+  const beginProfessional = document.getElementById("beginProfessional");
+  const beginPremium = document.getElementById("beginPremium");
 
   const productsCalc = document.getElementById("productsCalc");
   const productsSum = document.getElementById("productsSum");
@@ -109,4 +112,28 @@ document.addEventListener("DOMContentLoaded", function () {
     sum3 = 60;
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
   });
+  beginBasic.addEventListener("click", function () {
+    packageType.value = "Basic";
+    cover.innerText = "";
+    packageTypeOutcome.innerText = packageType.value;
+    packageSum.innerText = '$0';
+    sum3 = 0;
+    totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
+  });
+  beginProfessional.addEventListener("click", function () {
+    packageType.value = "Professional";
+    cover.innerText = "";
+    packageTypeOutcome.innerText = packageType.value;
+    packageSum.innerText = '$25';
+    sum3 = 25;
+    totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
+  });
+  beginPremium.addEventListener("click", function () {
+    packageType.value = "Premium";
+    cover.innerText = "";
+    packageTypeOutcome.innerText = packageType.value;
+    packageSum.innerText = '$60';
+    sum3 = 60;
+    totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
+  })
 });

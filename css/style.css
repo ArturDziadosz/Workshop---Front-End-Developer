@@ -59,6 +59,9 @@ HEADER
 .header {
   width: 100vw;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .29);
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--bgc-domain);
 }
 
 .header__bar {
@@ -115,6 +118,10 @@ HEADER
   padding-right: 0;
 }
 
+.hamburgerMenu {
+  display: none;
+}
+
 /*
 BANNER
 */
@@ -150,6 +157,12 @@ BANNER
   padding: 22px 157px;
   border-radius: 40px;
   margin-top: 38px;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+}
+
+.btn--banner:active {
+  box-shadow: 5px 5px 10px var(--bgc-dark) inset,
+              -1px -1px 5px var(--bgc-dark) inset;
 }
 
 /*

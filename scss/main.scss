@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (orientation: landscape) {
   .container {
     max-width: 375px;
     margin: 0 auto;
@@ -7,7 +7,7 @@
   .header {
     .header__bar {
       .header__logo {
-        padding: 22px 131px 16px 25px;
+        padding: 22px 10px 16px 25px;
         line-height: 32px;
       }
 
@@ -19,10 +19,11 @@
       .hamburgerMenu {
         height: 12px;
         width: 20px;
-        margin: 30px;
+        margin: 30px 30px 30px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-shrink: 0;
 
         .slice {
           width: 100%;
@@ -36,6 +37,7 @@
     width: 375px;
     height: 267px+70px+364px;
     background-size: 800px;
+    margin: 0 auto;
 
     .banner__title {
       font-size: 35px;
@@ -169,18 +171,22 @@
 
       .tray__box {
         height: 243px;
+
         .tray__box__title {
           font-size: 29px;
         }
+
         .tray__box__text {
           font-size: 16px;
           line-height: 22px;
         }
       }
     }
+
     .tray--special {
       height: 195px;
       padding: 0;
+
       .tray__img--trumpet {
         width: 295px;
         height: 208px;
@@ -188,6 +194,69 @@
         position: absolute;
         left: -10px;
         bottom: -40px;
+      }
+    }
+  }
+  .pricing {
+    width: 293px;
+    height: 1031px;
+    margin: 0 auto;
+
+    .pricing__title {
+      margin-top: 60px;
+      margin-bottom: 14px;
+    }
+
+    .pricing__boxes {
+      flex-direction: column;
+      justify-content: center;
+
+      .pricing__box {
+        width: 293px;
+        height: 251px;
+        padding: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 54px;
+        align-items: flex-start;
+        align-content: space-between;
+
+        &:first-child {
+          .pricing__box__title{
+            margin-left: 25px;
+          }
+          .pricing__box__price {
+            margin-bottom: 60px;
+            margin-left: 25px;
+          }
+        }
+
+        .pricing__box__title {
+          margin: 60px 0 1px;
+          align-self: center;
+        }
+
+        .pricing__box__price {
+          margin: 0;
+          align-self: center;
+
+        }
+
+        .pricing__box__text {
+          margin-bottom: 47px;
+          align-self: center;
+        }
+
+        .pricing__box__checklist {
+          margin-bottom: 20px;
+        }
+
+        .btn {
+
+        }
+      }
+
+      .pricing__box--special {
+        margin: 0 0 54px 0;
       }
     }
   }

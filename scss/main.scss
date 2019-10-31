@@ -186,6 +186,7 @@
     .tray--special {
       height: 195px;
       padding: 0;
+      min-width: 314px;
 
       .tray__img--trumpet {
         max-width: 295px;
@@ -307,7 +308,7 @@
 
         .arrow {
           top: 300px;
-          left: 195px;
+          left: 75%;
           background-size: cover;
           width: 50px;
           height: 50px;
@@ -331,8 +332,9 @@
         label {
           margin: 0 0 0 20px;
           font-size: 1.2em;
+
           input {
-          transform: scale(1.5);
+            transform: scale(1.5);
             left: -12px;
           }
 
@@ -343,15 +345,88 @@
         margin-top: 50px;
         width: 90%;
         align-items: center;
-        .box__result__row {
-
-        }
-
-        .box__result__sum {
-
-        }
       }
     }
+  }
+  .question {
+    max-width: 316px;
+    height: 661px;
+    margin-top: 60px;
+    flex-direction: column;
+
+    .contact__title {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .contact__text {
+      display: block;
+      height: 45px;
+      margin: 5px 0 15px 0;
+
+    }
+
+    .contact__icons {
+      height: 64px;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 53px;
+
+      .contact__icon:nth-child(2) {
+        &::before {
+          margin-left: 0;
+        }
+      }
+
+    }
+
+    .question__form {
+      max-width: 316px;
+      height: 431px;
+
+      .form__input {
+        margin: 20px 0 42px 0;
+
+        &:nth-of-type(2) {
+          margin-bottom: 31px;
+        }
+      }
+
+      .form__checkbox {
+        height: 156px;
+
+        span {
+          height: 156px;
+          width: 277px;
+          text-align: justify;
+        }
+      }
+
+      .btn--send {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .footer {
+    margin-top: 44px;
+    height: 89px;
+
+    .footer__bar {
+      padding: 17px;
+
+      .footer__logo {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer__icons {
+      margin-right: 13px;
+
+      .footer__icon {
+        //transform: scale(1.2);
+      }
+    }
+
   }
 }
 

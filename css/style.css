@@ -653,7 +653,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   background-image: url("../assets/calc/Arrow Down.svg");
   top: 129px;
-  left: 404px;
+  left: 90%;
   transition: .2s;
 }
 

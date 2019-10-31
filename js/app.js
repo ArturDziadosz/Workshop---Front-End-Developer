@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const beginBasic = document.getElementById("beginBasic");
   const beginProfessional = document.getElementById("beginProfessional");
   const beginPremium = document.getElementById("beginPremium");
+  const hamburgerMenuBtn = document.getElementById("hamburgerMenu");
+  const allLiNavBar = document.querySelectorAll(".header__nav__list li");
 
   const productsCalc = document.getElementById("productsCalc");
   const productsSum = document.getElementById("productsSum");
@@ -78,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
     }
   });
+  //Rotating arrow
   cover.addEventListener("click", function () {
     options.classList.toggle("visible");
     arrow.classList.toggle("rotate");
@@ -136,4 +139,24 @@ document.addEventListener("DOMContentLoaded", function () {
     sum3 = 60;
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
   })
+
+  //hamburger Menu
+  hamburgerMenuBtn.addEventListener("click", function () {
+    this.firstElementChild.classList.contains("rotate45") ? (this.firstElementChild.classList.toggle("rotate-45")) && (this.firstElementChild.classList.toggle("rotate45")) : (this.firstElementChild.classList.toggle("rotate45")) && (this.firstElementChild.classList.toggle("rotate-45"));
+    this.children[1].classList.contains("rotate135") ? (this.children[1].classList.toggle("rotate-45v2")) && (this.children[1].classList.toggle("rotate135")) : (this.children[1].classList.toggle("rotate135")) && (this.children[1].classList.toggle("rotate-45v2"));
+    this.lastElementChild.classList.toggle("visible");
+
+    this.previousElementSibling.style.display === "block" ? this.previousElementSibling.style.display = "none" : this.previousElementSibling.style.display = "block";
+  });
+
+  //closing menu after clicking element in nav list
+  allLiNavBar.forEach(function (elem) {
+    elem.addEventListener("click", function () {
+      hamburgerMenuBtn.firstElementChild.classList.contains("rotate45") ? (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) : (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45"));
+      hamburgerMenuBtn.children[1].classList.contains("rotate135") ? (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) : (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2"));
+      hamburgerMenuBtn.lastElementChild.classList.toggle("visible");
+
+      this.parentElement.parentElement.style.display === "block" ? this.parentElement.parentElement.style.display = "none" : this.parentElement.parentElement.style.display = "block";
+    });
+  });
 });

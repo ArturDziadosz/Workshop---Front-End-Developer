@@ -645,6 +645,32 @@ input[type=number]::-webkit-outer-spin-button {
   visibility: hidden;
 }
 
+.rotate45 {
+  transform: rotate(45deg);
+  transition: 0.5s;
+  position: absolute;
+  top: 5px;
+}
+
+.rotate135 {
+  transform: rotate(135deg);
+  transition: 0.5s;
+  position: absolute;
+  top: 5px;
+}
+
+.rotate-45, .rotate-45v2 {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+}
+
+.rotate-45v2 {
+  top: 5px;
+}
+
+
 .arrow {
   content: "";
   display: block;

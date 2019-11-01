@@ -324,6 +324,12 @@
     .btn--banner {
       padding: 22px 92px;
       margin-top: 28px;
+      &:active {
+        transform: scale(1.05);
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
   .info {

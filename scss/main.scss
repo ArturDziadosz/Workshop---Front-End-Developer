@@ -1,14 +1,127 @@
-@media screen and (max-width: 375px), (orientation: landscape) and (max-width: 768px) {
-  .container {
-    max-width: 375px;
-    margin: 0 auto;
-  }
+@media (min-width: 1900px) {
+  .banner {
+    height: 80vh;
 
+    .banner__title {
+      margin-top: 200px;
+      transform: scale(1.5);
+    }
+
+    .banner__text {
+      transform: scale(1.5);
+    }
+
+    .btn--banner {
+      transform: scale(1.5);
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .header__bar {
+    max-width: 90%;
+  }
+  .main {
+    padding: 105px 12px;
+
+    .tray--smaller {
+      margin-right: 12px;
+      width: 50%;
+
+    }
+
+    .tray--special {
+      width: 40%;
+    }
+
+  }
+  .pricing {
+    padding: 0 12px;
+
+    .pricing__boxes {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .pricing__box {
+        height: 380px;
+
+        .pricing__box__text {
+          margin-bottom: 25px;
+        }
+
+        .pricing__box__checklist {
+          &:last-of-type {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer__bar {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__nav__list {
+    .header__nav__list__element {
+      padding-left: 0;
+
+      &:hover:before {
+        width: calc(100% - 40px);
+        margin-left: -5px;
+      }
+
+      //.header__nav__list li:last-child .header__nav__list__element:hover:before
+    }
+
+    li {
+      &:last-child {
+        .header__nav__list__element {
+          &:hover:before {
+            width: calc(100% + 10px);
+          }
+        }
+      }
+    }
+  }
+  .info {
+    width: 90%;
+
+    .info__title {
+      text-align: center;
+    }
+
+    .info__boxes {
+      justify-content: space-around;
+
+      .info__box {
+        margin: 0;
+      }
+    }
+  }
+  .tray {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+
+    .tray__img--trumpet {
+      margin-left: 0;
+    }
+  }
+  .question {
+    width: 100%;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 768px) {
   .header__bar {
     position: relative;
 
     .header__logo {
-      padding: 22px 10px 16px 25px;
+      padding: 22px 10px 16px 0;
       line-height: 32px;
     }
 
@@ -16,20 +129,23 @@
       display: none;
       position: absolute;
       height: 175px;
-      width: 375px;
+      width: 200px;
       top: 60px;
       box-shadow: 0 3px 6px rgba(0, 0, 0, .29),
       0 3px 6px rgba(0, 0, 0, .29) inset;
       background-color: var(--bgc-domain);
+      right: 0;
 
       .header__nav__list {
         flex-direction: column;
-        padding: 31px 0 34px 25px;
+        align-items: flex-end;
+        padding: 31px 35px 34px 25px;
 
         .header__nav__list__element {
           line-height: 15px;
           padding: 0;
           margin-bottom: 14px;
+
           &::before {
             display: none;
           }
@@ -59,10 +175,136 @@
         background-color: var(--color-lb);
       }
     }
+  }
+  .info {
+    height: 400px;
 
+    .info__title {
+      margin: 50px 0;
+    }
+  }
+  .main {
+    padding: 50px 12px;
+
+    .tray--special {
+      padding-left: 0;
+
+      .tray__img--trumpet {
+        height: 200px;
+      }
+    }
+
+    .tray__box--laptop {
+      margin-right: 0;
+
+      &::before {
+        right: 0;
+
+      }
+
+      .tray__img--laptop {
+        height: 184px;
+
+      }
+    }
+
+    .tray__box--phone {
+      margin-left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        width: 280px;
+        height: 280px;
+        top: 0;
+        left: 0;
+      }
+
+      .tray__img--phone {
+        position: static;
+        height: 80%;
+        width: auto;
+      }
+    }
+  }
+  .pricing__title {
+    margin-top: 50px;
+  }
+  .calculator {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .cover {
+      width: 100%;
+    }
+
+    .options {
+      width: 100%;
+    }
+  }
+  .question {
+    margin-top: 50px;
+
+    .contact__icons {
+      height: 84px;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 33px;
+
+      .contact__icon:nth-child(2) {
+        &::before {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .header__bar {
+    .header__logo {
+      padding: 22px 10px 16px 0;
+      line-height: 32px;
+    }
+
+    .header__nav {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .29),
+      0 3px 6px rgba(0, 0, 0, .29) inset;
+      background-color: var(--bgc-domain);
+      left: 0;
+      width: 100%;
+
+      .header__nav__list {
+        flex-direction: column;
+        padding: 31px 0 34px 25px;
+        align-items: flex-start;
+
+        .header__nav__list__element {
+          line-height: 15px;
+          padding: 0;
+          margin-bottom: 14px;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        li {
+          &:last-child .header__nav__list__element {
+            margin-bottom: 0;
+          }
+
+        }
+      }
+    }
   }
   .banner {
-    max-width: 375px;
+    width: 100%;
     height: 267px+70px+364px;
     background-size: 800px;
     margin: 0 auto;
@@ -128,6 +370,13 @@
       flex-direction: column-reverse;
       justify-content: space-between;
       margin-bottom: 41px;
+
+      &:nth-of-type(3) {
+        flex-direction: column;
+        padding: 0;
+        height: 535px;
+        margin-bottom: 0;
+      }
 
       .tray__box--mod {
         margin: 0;
@@ -195,6 +444,9 @@
     .tray--smaller {
       height: 298px;
       margin: 0;
+      padding-top: 30px;
+      width: 100%;
+      flex: 0 1 auto;
 
       .tray__box {
         height: 243px;
@@ -214,6 +466,7 @@
       height: 195px;
       padding: 0;
       min-width: 314px;
+      margin-bottom: 0;
 
       .tray__img--trumpet {
         max-width: 295px;
@@ -226,7 +479,7 @@
     }
   }
   .pricing {
-    max-width: 293px;
+    width: 90%;
     height: 1031px;
     margin: 0 auto;
 
@@ -238,6 +491,7 @@
     .pricing__boxes {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       .pricing__box {
         max-width: 293px;
@@ -282,29 +536,34 @@
 
       .pricing__box--special {
         margin: 0 0 54px 0;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }
   .calculator {
-    padding: 10px;
+    padding: 10px 10px 30px;
 
     .calc__title {
       margin-top: 30px;
       padding: 10px;
+      margin-bottom: 30px;
     }
 
     .calc__box {
       flex-direction: column;
 
       .calc__box__form {
-        max-width: 70%;
-        height: 500px;
+        max-width: 90%;
+        height: 340px;
         margin: 0;
+        justify-content: space-around;
+        align-items: center;
 
         .box__form {
-          height: 100px;
-          font-size: 2em;
-
+          height: 50px;
+          font-size: 1.6em;
+          width: 80%;
           text-align: center;
 
           &:nth-child(2) {
@@ -317,33 +576,30 @@
             vertical-align: center;
 
           }
-
-          &:nth-child(3) {
-            text-align: left;
-          }
         }
 
         .cover {
-          height: 100px;
-          max-width: 100%;
-          top: 275px;
+          height: 50px;
+          width: 80%;
+          top: 178px;
+          left: 34px;
           text-align: center;
-          font-size: 1em;
-          padding-top: 45px;
+          font-size: .9em;
+          padding-top: 20px;
           padding-right: 40px;
         }
 
         .arrow {
-          top: 300px;
+          top: 188px;
           left: 75%;
           background-size: cover;
-          width: 50px;
-          height: 50px;
+          width: 30px;
+          height: 30px;
         }
 
         .options {
-          top: 380px;
-          max-width: 100%;
+          top: 250px;
+          width: 100%;
           height: 200px;
 
           ul {
@@ -359,9 +615,10 @@
         label {
           margin: 0 0 0 20px;
           font-size: 1.2em;
+          align-self: flex-start;
 
           input {
-            transform: scale(1.5);
+            transform: scale(1.2);
             left: -12px;
           }
 
@@ -377,39 +634,44 @@
   }
   .question {
     max-width: 316px;
-    height: 661px;
     margin-top: 60px;
     flex-direction: column;
 
-    .contact__title {
-      font-size: 40px;
-      line-height: 48px;
-    }
+    .question__contact {
+      width: 90%;
+      margin: 0 auto;
 
-    .contact__text {
-      display: block;
-      height: 45px;
-      margin: 5px 0 15px 0;
 
-    }
+      .contact__title {
+        font-size: 40px;
+        line-height: 48px;
+      }
 
-    .contact__icons {
-      height: 64px;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-bottom: 53px;
+      .contact__text {
+        display: block;
+        height: 45px;
+        margin: 5px 0 15px 0;
 
-      .contact__icon:nth-child(2) {
-        &::before {
-          margin-left: 0;
+      }
+
+      .contact__icons {
+        height: 64px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 53px;
+
+        .contact__icon:nth-child(2) {
+          &::before {
+            margin-left: 0;
+          }
         }
       }
 
     }
 
     .question__form {
-      max-width: 316px;
-      height: 431px;
+      width: 90%;
+      margin: 0 auto;
 
       .form__input {
         margin: 20px 0 42px 0;
@@ -420,7 +682,7 @@
       }
 
       .form__checkbox {
-        height: 156px;
+        height: 200px;
 
         span {
           height: 156px;
@@ -456,5 +718,78 @@
 
   }
 }
+
+@media (max-width: 375px) {
+  .header__bar {
+    .header__nav {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .header__logo {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .banner {
+    .btn--banner {
+      padding: 20px 75px;
+    }
+  }
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .tray {
+      .tray__box {
+        width: 100%;
+      }
+
+      .tray__box--mod {
+        height: 185px;
+      }
+    }
+
+    .tray--special {
+      min-width: 100%;
+    }
+  }
+  .pricing {
+    .pricing__boxes {
+      .pricing__box {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .pricing__box--special {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+  .calculator {
+    .calc__box {
+      .calc__box__form {
+        label {
+          font-size: .9em;
+        }
+
+        .cover {
+          left: 27px;
+        }
+
+        .box__form {
+          &:last-of-type {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 

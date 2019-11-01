@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const beginPremium = document.getElementById("beginPremium");
   const hamburgerMenuBtn = document.getElementById("hamburgerMenu");
   const allLiNavBar = document.querySelectorAll(".header__nav__list li");
+  const navBar = document.getElementById("navBar");
 
   const productsCalc = document.getElementById("productsCalc");
   const productsSum = document.getElementById("productsSum");
@@ -27,43 +28,66 @@ document.addEventListener("DOMContentLoaded", function () {
   const accountingSum = document.getElementById("accountingSum");
   const terminalSum = document.getElementById("terminalSum");
   const totalSum = document.getElementById("totalSum");
-  let sum1 = 0;
-  let sum2 = 0;
-  let sum3 = 0;
-  let sum4 = 35;
-  let sum5 = 5;
+  let sum1 = 0,
+    sum2 = 0,
+    sum3 = 0,
+    sum4 = 0,
+    sum5 = 0;
+
+  // media query
+  const TabletSize = window.matchMedia("(max-width: 768px)");
+
+  //always showing navBar for wider screens
+  TabletSize.addListener(tablet);
+
+  //not closing nav menu on bigger screens
+  //resetting hamburger Menu
+  function tablet(size) {
+    if (size.matches) {
+      navBar.style.display === "block" ? navBar.style.display = "none" : navBar.style.display = "block";
+      if (hamburgerMenuBtn.lastElementChild.classList.contains("visible")) {
+        hamburgerMenuBtn.firstElementChild.classList.contains("rotate45") ? (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) : (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45"));
+        hamburgerMenuBtn.children[1].classList.contains("rotate135") ? (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) : (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2"));
+        hamburgerMenuBtn.lastElementChild.classList.toggle("visible");
+      }
+
+    } else {
+      navBar.style.display = "block";
+    }
+  }
 
   //Events
-  productQuantity.addEventListener("click", function () {
+  productQuantity.addEventListener("input", function () {
+    productsCalc.parentElement.classList.remove("visible");
     productsCalc.innerText = `${this.value} * $0.5`;
     productsSum.innerText = `$${(this.value * 0.5)}`;
     sum1 = (this.value * 0.5);
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
+    console.log(productQuantity.value);
+    if (productQuantity.value === "") {
+      productsCalc.parentElement.classList.add("visible");
+    }
   });
-  productQuantity.addEventListener("keyup", function () {
-    productsCalc.innerText = `${this.value} * $0.5`;
-    productsSum.innerText = `$${(this.value * 0.5)}`;
-    sum1 = (this.value * 0.5);
-    totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
-  });
-  estimatedOrder.addEventListener("click", function () {
+
+  estimatedOrder.addEventListener("input", function () {
+    ordersCalc.parentElement.classList.remove("visible");
     ordersCalc.innerText = `${this.value} * $0.25`;
     ordersSum.innerText = `$${(this.value * 0.25)}`;
     sum2 = (this.value * 0.25);
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
+    if (estimatedOrder.value === "") {
+      ordersCalc.parentElement.classList.add("visible");
+    }
   });
-  estimatedOrder.addEventListener("keyup", function () {
-    ordersCalc.innerText = `${this.value} * $0.25`;
-    ordersSum.innerText = `$${(this.value * 0.25)}`;
-    sum2 = (this.value * 0.25);
-    totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
-  });
+
   accounting.addEventListener("click", function () {
     if (this.checked) {
+      accountingSum.parentElement.classList.remove("visible");
       accountingSum.innerText = `$35`;
       sum4 = 35;
       totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
     } else {
+      accountingSum.parentElement.classList.add("visible");
       accountingSum.innerText = `$0`;
       sum4 = 0;
       totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
@@ -71,23 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   rental.addEventListener("click", function () {
     if (this.checked) {
+      terminalSum.parentElement.classList.remove("visible");
       terminalSum.innerText = `$5`;
       sum5 = 5;
       totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
     } else {
+      terminalSum.parentElement.classList.add("visible");
       terminalSum.innerText = `$0`;
       sum5 = 0;
       totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
     }
   });
-  //Rotating arrow
+
+  //Rotating arrow and showing options
   cover.addEventListener("click", function () {
     options.classList.toggle("visible");
-    arrow.classList.toggle("rotate");
+    arrow.classList.toggle("rotate180");
   });
+
   basic.addEventListener("click", function () {
     options.classList.toggle("visible");
-    arrow.classList.toggle("rotate");
+    arrow.classList.toggle("rotate180");
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Basic";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
@@ -97,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   professional.addEventListener("click", function () {
     options.classList.toggle("visible");
-    arrow.classList.toggle("rotate");
+    arrow.classList.toggle("rotate180");
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Professional";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
@@ -107,7 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   premium.addEventListener("click", function () {
     options.classList.toggle("visible");
-    arrow.classList.toggle("rotate");
+    arrow.classList.toggle("rotate180");
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Premium";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
@@ -115,7 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
     sum3 = 60;
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
   });
+
+  //pricing btns go into calculator
   beginBasic.addEventListener("click", function () {
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Basic";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
@@ -124,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
   });
   beginProfessional.addEventListener("click", function () {
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Professional";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
@@ -132,13 +167,15 @@ document.addEventListener("DOMContentLoaded", function () {
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
   });
   beginPremium.addEventListener("click", function () {
+    packageTypeOutcome.parentElement.classList.remove("visible");
     packageType.value = "Premium";
     cover.innerText = "";
     packageTypeOutcome.innerText = packageType.value;
     packageSum.innerText = '$60';
     sum3 = 60;
     totalSum.innerText = `$${sum1 + sum2 + sum3 + sum4 + sum5}`;
-  })
+  });
+
 
   //hamburger Menu
   hamburgerMenuBtn.addEventListener("click", function () {
@@ -152,11 +189,24 @@ document.addEventListener("DOMContentLoaded", function () {
   //closing menu after clicking element in nav list
   allLiNavBar.forEach(function (elem) {
     elem.addEventListener("click", function () {
-      hamburgerMenuBtn.firstElementChild.classList.contains("rotate45") ? (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) : (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate45")) && (hamburgerMenuBtn.firstElementChild.classList.toggle("rotate-45"));
-      hamburgerMenuBtn.children[1].classList.contains("rotate135") ? (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) : (hamburgerMenuBtn.children[1].classList.toggle("rotate135")) && (hamburgerMenuBtn.children[1].classList.toggle("rotate-45v2"));
-      hamburgerMenuBtn.lastElementChild.classList.toggle("visible");
-
-      this.parentElement.parentElement.style.display === "block" ? this.parentElement.parentElement.style.display = "none" : this.parentElement.parentElement.style.display = "block";
-    });
+        tablet(TabletSize);
+        }
+      );
   });
+
+  //input number not negative
+  productQuantity.onkeydown = function(e) {
+    if(!((e.keyCode > 95 && e.keyCode < 106)
+      || (e.keyCode > 47 && e.keyCode < 58)
+      || e.keyCode == 8)) {
+      return false;
+    }
+  };
+  estimatedOrder.onkeydown = function(e) {
+    if(!((e.keyCode > 95 && e.keyCode < 106)
+      || (e.keyCode > 47 && e.keyCode < 58)
+      || e.keyCode == 8)) {
+      return false;
+    }
+  };
 });
